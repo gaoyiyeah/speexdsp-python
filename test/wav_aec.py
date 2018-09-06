@@ -2,8 +2,10 @@
 
 import wave
 import sys
-from speexdsp import EchoCanceller
+import os
 
+sys.path.append(os.path.dirname(__file__) + '/../src/')
+from speexdsp import EchoCanceller
 
 if len(sys.argv) < 4:
     print('Usage: {} near.wav far.wav out.wav'.format(sys.argv[0]))
